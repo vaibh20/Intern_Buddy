@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intern Buddy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    ::selection { background: #1e3a8a; color: white; }
+    .fade-in { animation: fadeIn 1s ease-in-out both; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-700">Intern Buddy</h1>
+      <ul class="flex gap-5 text-sm font-semibold">
+        <li><a href="#home" class="hover:text-blue-700 transition">Home</a></li>
+        <li><a href="#info" class="hover:text-blue-700 transition">Internships</a></li>
+        <li><a href="#sites" class="hover:text-blue-700 transition">Top Sites</a></li>
+        <li><a href="#form" class="hover:text-blue-700 transition">Apply</a></li>
+        <li><a href="#login" class="hover:text-blue-700 transition">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section id="home" class="h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex flex-col justify-center items-center text-center px-4 fade-in">
+    <h2 class="text-5xl font-bold mb-4 text-blue-900">Welcome to Intern Buddy</h2>
+    <p class="text-lg text-blue-800 mb-6">Find the best internships, gain experience, and shape your career in tech fields like web development, UI/UX, and more.</p>
+    <a href="#form" class="bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800 transition">Apply Now</a>
+  </section>
+
+  <!-- Internship Info -->
+  <section id="info" class="py-20 bg-white fade-in">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold mb-6 text-blue-800">Why Internships Matter?</h2>
+      <p class="text-gray-600 text-lg mb-4">Internships provide real-world experience, enhance your resume, help build networks, and guide you towards your career goals.</p>
+      <p class="text-gray-600 text-lg">Intern Buddy assists students in tech—especially web developers and designers—in finding relevant and verified internships easily.</p>
+    </div>
+  </section>
+
+  <!-- Top Internship Sites -->
+  <section id="sites" class="py-20 bg-gray-100 fade-in">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10 text-blue-800">Top Internship Sites</h2>
+      <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
+        <a href="https://internshala.com" target="_blank" class="bg-white p-6 rounded shadow hover:scale-105 transition text-center">
+          <h3 class="text-xl font-semibold mb-2">Internshala</h3>
+          <p class="text-gray-600 text-sm">India’s #1 internship platform for students.</p>
+        </a>
+        <a href="https://www.linkedin.com/jobs/internship-jobs/" target="_blank" class="bg-white p-6 rounded shadow hover:scale-105 transition text-center">
+          <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+          <p class="text-gray-600 text-sm">Internship listings and networking for professionals.</p>
+        </a>
+        <a href="https://www.naukri.com/internship-jobs" target="_blank" class="bg-white p-6 rounded shadow hover:scale-105 transition text-center">
+          <h3 class="text-xl font-semibold mb-2">Naukri.com</h3>
+          <p class="text-gray-600 text-sm">Find verified internship jobs across India.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section id="form" class="py-20 bg-white fade-in">
+    <div class="max-w-xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-blue-800">Apply for Internship</h2>
+      <form class="bg-gray-50 p-6 rounded-lg shadow space-y-4">
+        <input type="text" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+        <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+        <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+        <input type="text" placeholder="College/University" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+        <input type="text" placeholder="Course & Year" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+        <input type="text" placeholder="Skills (e.g., HTML, CSS, JS)" class="w-full p-3 border border-gray-300 rounded" />
+        <select class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <option value="">Select Domain</option>
+          <option value="frontend">Frontend Development</option>
+          <option value="backend">Backend Development</option>
+          <option value="fullstack">Full Stack Development</option>
+          <option value="uiux">UI/UX Design</option>
+          <option value="data">Data Science</option>
+          <option value="mobile">Mobile App Development</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea rows="4" placeholder="Why do you want this internship?" class="w-full p-3 border border-gray-300 rounded"></textarea>
+        <button class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Login & Signup (Toggle Section) -->
+<section id="login" class="py-20 bg-gray-100 fade-in">
+  <div class="max-w-md mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-blue-800">Login / Signup</h2>
+
+    <!-- Toggle Buttons -->
+    <div class="flex justify-center mb-6">
+      <button id="loginBtn" class="px-6 py-2 bg-blue-600 text-white rounded-l hover:bg-blue-700 transition focus:outline-none">
+        Login
+      </button>
+      <button id="signupBtn" class="px-6 py-2 bg-blue-300 text-blue-800 rounded-r hover:bg-blue-400 transition focus:outline-none">
+        Signup
+      </button>
+    </div>
+
+    <!-- Forms Container -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <!-- Login Form -->
+      <form id="loginForm" class="space-y-4">
+        <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded" required />
+        <input type="password" placeholder="Password" class="w-full p-3 border border-gray-300 rounded" required />
+        <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Login</button>
+      </form>
+
+      <!-- Signup Form (hidden by default) -->
+      <form id="signupForm" class="space-y-4 hidden">
+        <input type="text" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded" required />
+        <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded" required />
+        <input type="password" placeholder="Password" class="w-full p-3 border border-gray-300 rounded" required />
+        <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const loginBtn = document.getElementById('loginBtn');
+  const signupBtn = document.getElementById('signupBtn');
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+
+  loginBtn.addEventListener('click', () => {
+    loginForm.classList.remove('hidden');
+    signupForm.classList.add('hidden');
+    loginBtn.classList.add('bg-blue-600', 'text-white');
+    loginBtn.classList.remove('bg-blue-300', 'text-blue-800');
+    signupBtn.classList.remove('bg-blue-600', 'text-white');
+    signupBtn.classList.add('bg-blue-300', 'text-blue-800');
+  });
+
+  signupBtn.addEventListener('click', () => {
+    signupForm.classList.remove('hidden');
+    loginForm.classList.add('hidden');
+    signupBtn.classList.add('bg-blue-600', 'text-white');
+    signupBtn.classList.remove('bg-blue-300', 'text-blue-800');
+    loginBtn.classList.remove('bg-blue-600', 'text-white');
+    loginBtn.classList.add('bg-blue-300', 'text-blue-800');
+  });
+</script>
+
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center py-4 text-sm">
+    © 2025 Intern Buddy | Built with ❤️ using HTML, Tailwind CSS & JS
+  </footer>
+
+</body>
+</html>
